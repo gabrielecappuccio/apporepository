@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Example</title>
+    <title>Area Calculator</title>
+</head>
+<body>
+
+    <p id="demo">This is the original text.</p>
+
+    <script>
+        console.log("We are Anonymous");
+
+        function add(a, b) {
+            return console.log(a + b);
+        }
+
+        add(100, 200);
+
+        function log() {
+            console.log("Hello !");
+        }
+
+        // Asyncronous Method. In a separeted Thread wait for 5 seconds.
+        // The main run below immediatly.
+        setTimeout(log, 5000);
+
+        let userDetails = {
+            firstName : "Gabriele",
+            lastName : "Cappuccio",
+            age : 53,
+            invokeName () {
+                console.log(`Hello, my name is ${this.firstName} ${this.lastName} and I am ${this.age} years old.`)
+            }
+        }
+
+        userDetails.invokeName();
+
+        // Arrow Function
+        let multiply = (x, y) => {
+            return console.log(x * y);
+        }
+
+        // Single Line Arrow Function
+        let subtration = (x, y) => console.log(x - y);
+
+        // Single Line Arrow Function with one Parameter
+        let funoneparam = a => console.log("Single Line Arrow Function with one Parameter; string : " + a);
+
+        // Single Line Arrow Function with No Parameters
+        let funnoparams = () => console.log("Single Line Arrow Function with No Parameters");
+
+        multiply(6, 5);
+        subtration(7, 5);
+        funoneparam("This is my String Param.");
+        funnoparams();
+
+    </script>
+
+    <button type="button" onclick="changeText()">Click Me!</button>
+
+    <script src="script.js"></script>
+
+    <h3>Rectangle Area Calculator</h3>
+
+    <label for="length">Length:</label>
+    <input type="number" id="length" value="10"> 
+    <br><br> 
+
+    <label for="width">Width:</label>
+    <input type="number" id="width" value="5">
+    <br><br> 
+
+    <button onclick="calculateArea()">Calculate Area</button>
+
+    <p id="result">The area will appear here.</p>
+
+    <script src="scriptArea.js"></script>    
+</body>
+</html>
